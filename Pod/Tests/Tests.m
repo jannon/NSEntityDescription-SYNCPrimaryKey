@@ -19,19 +19,24 @@
 
 - (void)testRemoteKey {
     DATAStack *dataStack = [self dataStack];
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Note" inManagedObjectContext:dataStack.mainContext];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"User"
+                                              inManagedObjectContext:dataStack.mainContext];
+
     XCTAssertEqualObjects([entity hyp_remoteKey], @"id");
 }
 
 - (void)testLocalKey {
     DATAStack *dataStack = [self dataStack];
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Note" inManagedObjectContext:dataStack.mainContext];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"User"
+                                              inManagedObjectContext:dataStack.mainContext];
+
     XCTAssertEqualObjects([entity hyp_localKey], @"remoteID");
 }
 
 - (void)testPrimaryKeyAttribute {
     DATAStack *dataStack = [self dataStack];
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Note" inManagedObjectContext:dataStack.mainContext];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"User"
+                                              inManagedObjectContext:dataStack.mainContext];
 
     NSAttributeDescription *attribute = [entity hyp_primaryKeyAttribute];
     XCTAssertEqualObjects(attribute.attributeValueClassName, @"NSNumber");
