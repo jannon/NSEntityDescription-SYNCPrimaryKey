@@ -2,7 +2,7 @@
 
 #import "NSString+HYPNetworking.h"
 
-@implementation NSEntityDescription (Sync)
+@implementation NSEntityDescription (HYPPrimaryKey)
 
 - (NSAttributeDescription *)sync_primaryKeyAttribute {
     __block NSAttributeDescription *primaryKeyAttribute;

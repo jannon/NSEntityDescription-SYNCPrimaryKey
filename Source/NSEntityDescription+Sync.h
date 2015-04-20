@@ -6,7 +6,7 @@ static NSString * const SyncDefaultRemotePrimaryKey = @"id";
 static NSString * const SyncCustomPrimaryKey = @"hyper.isPrimaryKey";
 static NSString * const SyncCustomRemoteKey = @"hyper.remoteKey";
 
-@interface NSEntityDescription (Sync)
+@interface NSEntityDescription (HYPPrimaryKey)
 
 - (NSString *)sync_remoteKey;
 
