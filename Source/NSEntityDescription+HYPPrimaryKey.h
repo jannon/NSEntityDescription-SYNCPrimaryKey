@@ -8,10 +8,10 @@ static NSString * const SyncCustomRemoteKey = @"hyper.remoteKey";
 
 @interface NSEntityDescription (HYPPrimaryKey)
 
-- (NSString *)sync_remoteKey;
+- (NSString *)hyp_remoteKey;
 
-- (NSString *)sync_localKey;
+- (NSString *)hyp_localKey;
 
-- (NSAttributeDescription *)sync_primaryKeyAttribute;
+- (NSAttributeDescription *)hyp_primaryKeyAttribute;
 
 @end

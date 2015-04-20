@@ -1,10 +1,10 @@
-#import "NSEntityDescription+Sync.h"
+#import "NSEntityDescription+HYPPrimaryKey.h"
 
 #import "NSString+HYPNetworking.h"
 
 @implementation NSEntityDescription (HYPPrimaryKey)
 
-- (NSAttributeDescription *)sync_primaryKeyAttribute {
+- (NSAttributeDescription *)hyp_primaryKeyAttribute {
     __block NSAttributeDescription *primaryKeyAttribute;
 
     [self.propertiesByName enumerateKeysAndObjectsUsingBlock:^(NSString *key,
@@ -27,15 +27,15 @@
     return primaryKeyAttribute;
 }
 
-- (NSString *)sync_localKey {
-    NSAttributeDescription *primaryAttribute = [self sync_primaryKeyAttribute];
+- (NSString *)hyp_localKey {
+    NSAttributeDescription *primaryAttribute = [self hyp_primaryKeyAttribute];
     NSString *localKey = primaryAttribute.name;
 
     return localKey;
 }
 
-- (NSString *)sync_remoteKey {
-    NSAttributeDescription *primaryAttribute = [self sync_primaryKeyAttribute];
+- (NSString *)hyp_remoteKey {
+    NSAttributeDescription *primaryAttribute = [self hyp_primaryKeyAttribute];
     NSString *remoteKey = primaryAttribute.userInfo[SyncCustomRemoteKey];
 
     if (!remoteKey) {
