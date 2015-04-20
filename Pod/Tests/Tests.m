@@ -7,16 +7,16 @@
 
 @implementation Tests
 
-- (void)testPassingExample
-{
-    NSArray *array;
-    XCTAssertNil(array);
+- (void)testRemoteKey {
+
 }
 
-- (void)testFailingExample
-{
-    NSArray *array;
-    XCTAssertNotNil(array);
+- (void)testLocalKey {
+
+}
+
+- (void)testPrimaryKeyAttribute {
+
 }
 
 @end
