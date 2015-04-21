@@ -10,16 +10,15 @@
     [self.propertiesByName enumerateKeysAndObjectsUsingBlock:^(NSString *key,
                                                                NSAttributeDescription *attributeDescription,
                                                                BOOL *stop) {
-        NSString *isPrimaryKey = attributeDescription.userInfo[SyncCustomPrimaryKey];
+        NSString *isPrimaryKey = attributeDescription.userInfo[SyncCustomLocalKey];
         BOOL hasCustomPrimaryKey = (isPrimaryKey &&
                                     [isPrimaryKey isEqualToString:@"YES"]);
-
         if (hasCustomPrimaryKey) {
             primaryKeyAttribute = attributeDescription;
             *stop = YES;
         }
 
-        if ([key isEqualToString:SyncDefaultLocalPrimaryKey]) {
+        if ([key isEqualToString:HYPPrimaryKeyDefaultLocal]) {
             primaryKeyAttribute = attributeDescription;
         }
     }];
@@ -39,8 +38,8 @@
     NSString *remoteKey = primaryAttribute.userInfo[SyncCustomRemoteKey];
 
     if (!remoteKey) {
-        if ([primaryAttribute.name isEqualToString:SyncDefaultLocalPrimaryKey]) {
-            remoteKey = SyncDefaultRemotePrimaryKey;
+        if ([primaryAttribute.name isEqualToString:HYPPrimaryKeyDefaultLocal]) {
+            remoteKey = HYPPrimaryKeyDefaultRemote;
         } else {
             remoteKey = [primaryAttribute.name hyp_remoteString];
         }
