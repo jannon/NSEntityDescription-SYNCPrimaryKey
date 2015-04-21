@@ -1,10 +1,8 @@
 language: objective-c
 before_install:
-- gem install cocoapods
-
-# Use when you don't have third party dependencies
-script: xctool -project Pod/Pod.xcodeproj -scheme Tests -sdk iphonesimulator build test
-
-# Use when you have third party dependencies (CocoaPods generates a workspace)
-# podfile: Pod/Podfile
-# script: xctool -workspace Pod/Pod.xcworkspace -scheme Tests -sdk iphonesimulator build test
+ - gem install cocoapods
+ - gem install obcd
+ - gem install slather
+podfile: Tests/Podfile
+script: xctool -workspace Pod/Pod.xcworkspace -scheme Tests -sdk iphonesimulator build test GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES clean test
+after_success: slather
