@@ -8,7 +8,11 @@
 ## Usage
 
 ```objc
-<API>
+- (NSAttributeDescription *)sync_primaryKeyAttribute;
+
+- (NSString *)sync_localKey;
+
+- (NSString *)sync_remoteKey;
 ```
 
 ## Installation
