@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "NSEntityDescription-HYPPrimaryKey"
-  s.summary          = "A short description of NSEntityDescription-HYPPrimaryKey."
+  s.summary          = "Support for primary keys in Core Data"
   s.version          = "0.1.0"
   s.homepage         = "https://github.com/hyperoslo/NSEntityDescription-HYPPrimaryKey"
   s.license          = 'MIT'
@@ -10,6 +10,5 @@ Pod::Spec.new do |s|
   s.platform     = :ios, '7.0'
   s.requires_arc = true
   s.source_files = 'Source/**/*'
-# s.frameworks = 'UIKit', 'MapKit'
-# s.dependency 'AFNetworking', '~> 2.3'
+  s.frameworks = 'CoreData'
 end
