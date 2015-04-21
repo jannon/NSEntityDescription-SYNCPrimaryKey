@@ -13,6 +13,8 @@ You can mark any attribute as primary key by adding `hyper.isPrimaryKey` and the
 
 ![Custom primary key](https://raw.githubusercontent.com/hyperoslo/Sync/master/Images/custom-primary-key-v2.png)
 
+## Interface
+
 ```objc
 - (NSAttributeDescription *)sync_primaryKeyAttribute;
 
