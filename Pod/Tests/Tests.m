@@ -20,7 +20,6 @@
 
 }
 
-
 - (void)testPrimaryKeyAttribute {
     NSEntityDescription *entity = [self entityForName:@"User"];
 
