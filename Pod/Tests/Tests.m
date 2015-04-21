@@ -2,7 +2,7 @@
 @import XCTest;
 
 #import "DATAStack.h"
-#import "NSEntityDescription+HYPPrimaryKey.h"
+#import "NSEntityDescription+SYNCPrimaryKey.h"
 
 @interface Tests : XCTestCase
 
@@ -23,52 +23,52 @@
 - (void)testPrimaryKeyAttribute {
     NSEntityDescription *entity = [self entityForName:@"User"];
 
-    NSAttributeDescription *attribute = [entity hyp_primaryKeyAttribute];
+    NSAttributeDescription *attribute = [entity sync_primaryKeyAttribute];
     XCTAssertEqualObjects(attribute.attributeValueClassName, @"NSNumber");
     XCTAssertEqual(attribute.attributeType, NSInteger32AttributeType);
 
     entity = [self entityForName:@"Note"];
-    attribute = [entity hyp_primaryKeyAttribute];
+    attribute = [entity sync_primaryKeyAttribute];
     XCTAssertEqualObjects(attribute.attributeValueClassName, @"NSNumber");
     XCTAssertEqual(attribute.attributeType, NSInteger32AttributeType);
 
     entity = [self entityForName:@"Tag"];
-    attribute = [entity hyp_primaryKeyAttribute];
+    attribute = [entity sync_primaryKeyAttribute];
     XCTAssertEqualObjects(attribute.attributeValueClassName, @"NSNumber");
     XCTAssertEqual(attribute.attributeType, NSInteger32AttributeType);
 
     entity = [self entityForName:@"NoID"];
-    attribute = [entity hyp_primaryKeyAttribute];
+    attribute = [entity sync_primaryKeyAttribute];
     XCTAssertNil(attribute);
 }
 
 - (void)testLocalKey {
     NSEntityDescription *entity = [self entityForName:@"User"];
 
-    XCTAssertEqualObjects([entity hyp_localKey], @"remoteID");
+    XCTAssertEqualObjects([entity sync_localKey], @"remoteID");
 
     entity = [self entityForName:@"Note"];
-    XCTAssertEqualObjects([entity hyp_localKey], @"uniqueID");
+    XCTAssertEqualObjects([entity sync_localKey], @"uniqueID");
 
     entity = [self entityForName:@"Tag"];
-    XCTAssertEqualObjects([entity hyp_localKey], @"randomId");
+    XCTAssertEqualObjects([entity sync_localKey], @"randomId");
 
     entity = [self entityForName:@"NoID"];
-    XCTAssertNil([entity hyp_localKey]);
+    XCTAssertNil([entity sync_localKey]);
 }
 
 - (void)testRemoteKey {
     NSEntityDescription *entity = [self entityForName:@"User"];
-    XCTAssertEqualObjects([entity hyp_remoteKey], @"id");
+    XCTAssertEqualObjects([entity sync_remoteKey], @"id");
 
     entity = [self entityForName:@"Note"];
-    XCTAssertEqualObjects([entity hyp_remoteKey], @"unique_id");
+    XCTAssertEqualObjects([entity sync_remoteKey], @"unique_id");
 
     entity = [self entityForName:@"Tag"];
-    XCTAssertEqualObjects([entity hyp_remoteKey], @"random_id");
+    XCTAssertEqualObjects([entity sync_remoteKey], @"random_id");
 
     entity = [self entityForName:@"NoID"];
-    XCTAssertNil([entity hyp_remoteKey]);
+    XCTAssertNil([entity sync_remoteKey]);
 }
 
 @end

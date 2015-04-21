@@ -1,9 +1,9 @@
-# NSEntityDescription-HYPPrimaryKey
+# NSEntityDescription-SYNCPrimaryKey
 
-[![CI Status](http://img.shields.io/travis/hyperoslo/NSEntityDescription-HYPPrimaryKey.svg?style=flat)](https://travis-ci.org/hyperoslo/NSEntityDescription-HYPPrimaryKey)
-[![Version](https://img.shields.io/cocoapods/v/NSEntityDescription-HYPPrimaryKey.svg?style=flat)](http://cocoadocs.org/docsets/NSEntityDescription-HYPPrimaryKey)
-[![License](https://img.shields.io/cocoapods/l/NSEntityDescription-HYPPrimaryKey.svg?style=flat)](http://cocoadocs.org/docsets/NSEntityDescription-HYPPrimaryKey)
-[![Platform](https://img.shields.io/cocoapods/p/NSEntityDescription-HYPPrimaryKey.svg?style=flat)](http://cocoadocs.org/docsets/NSEntityDescription-HYPPrimaryKey)
+[![CI Status](http://img.shields.io/travis/hyperoslo/NSEntityDescription-SYNCPrimaryKey.svg?style=flat)](https://travis-ci.org/hyperoslo/NSEntityDescription-SYNCPrimaryKey)
+[![Version](https://img.shields.io/cocoapods/v/NSEntityDescription-SYNCPrimaryKey.svg?style=flat)](http://cocoadocs.org/docsets/NSEntityDescription-SYNCPrimaryKey)
+[![License](https://img.shields.io/cocoapods/l/NSEntityDescription-SYNCPrimaryKey.svg?style=flat)](http://cocoadocs.org/docsets/NSEntityDescription-SYNCPrimaryKey)
+[![Platform](https://img.shields.io/cocoapods/p/NSEntityDescription-SYNCPrimaryKey.svg?style=flat)](http://cocoadocs.org/docsets/NSEntityDescription-SYNCPrimaryKey)
 
 ## Usage
 
@@ -13,11 +13,11 @@
 
 ## Installation
 
-**NSEntityDescription-HYPPrimaryKey** is available through [CocoaPods](http://cocoapods.org). To install
+**NSEntityDescription-SYNCPrimaryKey** is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'NSEntityDescription-HYPPrimaryKey'
+pod 'NSEntityDescription-SYNCPrimaryKey'
 ```
 
 ## Author
@@ -26,4 +26,4 @@ Hyper Interaktiv AS, ios@hyper.no
 
 ## License
 
-**NSEntityDescription-HYPPrimaryKey** is available under the MIT license. See the LICENSE file for more info.
+**NSEntityDescription-SYNCPrimaryKey** is available under the MIT license. See the LICENSE file for more info.
