@@ -5,7 +5,7 @@
     </entity>
     <entity name="Note" syncable="YES">
         <attribute name="attribute" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="uniqueID" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES">
+        <attribute name="uniqueID" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES">
             <userInfo>
                 <entry key="hyper.isPrimaryKey" value="YES"/>
             </userInfo>
@@ -13,9 +13,10 @@
     </entity>
     <entity name="Tag" syncable="YES">
         <attribute name="attribute" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="randomId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES">
+        <attribute name="randomId" optional="YES" attributeType="String" syncable="YES">
             <userInfo>
                 <entry key="hyper.isPrimaryKey" value="YES"/>
+                <entry key="hyper.remoteKey" value="id"/>
             </userInfo>
         </attribute>
     </entity>
@@ -24,9 +25,9 @@
         <attribute name="remoteID" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Note" positionX="-20" positionY="18" width="128" height="73"/>
-        <element name="Tag" positionX="160" positionY="0" width="128" height="73"/>
-        <element name="User" positionX="-207" positionY="-15" width="128" height="73"/>
         <element name="NoID" positionX="-27" positionY="18" width="128" height="60"/>
+        <element name="Note" positionX="-20" positionY="18" width="128" height="75"/>
+        <element name="Tag" positionX="160" positionY="0" width="128" height="75"/>
+        <element name="User" positionX="-207" positionY="-15" width="128" height="73"/>
     </elements>
 </model>

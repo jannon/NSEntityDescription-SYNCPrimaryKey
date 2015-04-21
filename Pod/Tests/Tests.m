@@ -30,12 +30,12 @@
     entity = [self entityForName:@"Note"];
     attribute = [entity sync_primaryKeyAttribute];
     XCTAssertEqualObjects(attribute.attributeValueClassName, @"NSNumber");
-    XCTAssertEqual(attribute.attributeType, NSInteger32AttributeType);
+    XCTAssertEqual(attribute.attributeType, NSInteger16AttributeType);
 
     entity = [self entityForName:@"Tag"];
     attribute = [entity sync_primaryKeyAttribute];
-    XCTAssertEqualObjects(attribute.attributeValueClassName, @"NSNumber");
-    XCTAssertEqual(attribute.attributeType, NSInteger32AttributeType);
+    XCTAssertEqualObjects(attribute.attributeValueClassName, @"NSString");
+    XCTAssertEqual(attribute.attributeType, NSStringAttributeType);
 
     entity = [self entityForName:@"NoID"];
     attribute = [entity sync_primaryKeyAttribute];
@@ -65,7 +65,7 @@
     XCTAssertEqualObjects([entity sync_remoteKey], @"unique_id");
 
     entity = [self entityForName:@"Tag"];
-    XCTAssertEqualObjects([entity sync_remoteKey], @"random_id");
+    XCTAssertEqualObjects([entity sync_remoteKey], @"id");
 
     entity = [self entityForName:@"NoID"];
     XCTAssertNil([entity sync_remoteKey]);
