@@ -1,7 +1,7 @@
 @import CoreData;
 @import XCTest;
 
-#import "DATAStack.h"
+@import DATAStack;
 #import "NSEntityDescription+SYNCPrimaryKey.h"
 
 @interface Tests : XCTestCase
@@ -13,7 +13,7 @@
 - (NSEntityDescription *)entityForName:(NSString *)name {
     DATAStack *dataStack = [[DATAStack alloc] initWithModelName:@"Pod"
                                                          bundle:[NSBundle bundleForClass:[self class]]
-                                                      storeType:DATAStackInMemoryStoreType];
+                                                      storeType:DATAStackStoreTypeInMemory];
 
     return  [NSEntityDescription entityForName:name
                         inManagedObjectContext:dataStack.mainContext];
