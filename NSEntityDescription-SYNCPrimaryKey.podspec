@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name             = "NSEntityDescription-SYNCPrimaryKey"
   s.summary          = "Support for primary keys in Core Data"
-  s.version          = "0.1.1"
+  s.version          = "0.1.2"
   s.homepage         = "https://github.com/hyperoslo/NSEntityDescription-SYNCPrimaryKey"
   s.license          = 'MIT'
   s.author           = { "Hyper Interaktiv AS" => "ios@hyper.no" }
@@ -14,5 +14,5 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.source_files = 'Source/**/*'
   s.frameworks = 'CoreData'
-  s.dependency 'NSString-HYPNetworking', '~> 0.3.3'
+  s.dependency 'NSString-HYPNetworking', '~> 0.4.0'
 end
