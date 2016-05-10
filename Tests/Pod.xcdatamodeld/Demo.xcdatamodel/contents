@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7549" systemVersion="14E7f" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10174" systemVersion="15E65" minimumToolsVersion="Automatic">
     <entity name="NoID" syncable="YES">
         <attribute name="attribute" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
@@ -10,6 +10,10 @@
                 <entry key="hyper.isPrimaryKey" value="YES"/>
             </userInfo>
         </attribute>
+    </entity>
+    <entity name="SimpleID" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Tag" syncable="YES">
         <attribute name="attribute" optional="YES" attributeType="String" syncable="YES"/>
@@ -29,5 +33,6 @@
         <element name="Note" positionX="-20" positionY="18" width="128" height="75"/>
         <element name="Tag" positionX="160" positionY="0" width="128" height="75"/>
         <element name="User" positionX="-207" positionY="-15" width="128" height="73"/>
+        <element name="SimpleID" positionX="-27" positionY="18" width="128" height="75"/>
     </elements>
 </model>

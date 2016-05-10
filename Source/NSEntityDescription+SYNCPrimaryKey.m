@@ -18,7 +18,7 @@
             *stop = YES;
         }
 
-        if ([key isEqualToString:SYNCDefaultLocalPrimaryKey]) {
+        if ([key isEqualToString:SYNCDefaultLocalPrimaryKey] || [key isEqualToString:SYNCDefaultLocalCompatiblePrimaryKey]) {
             primaryKeyAttribute = attributeDescription;
         }
     }];
@@ -38,7 +38,7 @@
     NSString *remoteKey = primaryAttribute.userInfo[SYNCCustomRemoteKey];
 
     if (!remoteKey) {
-        if ([primaryAttribute.name isEqualToString:SYNCDefaultLocalPrimaryKey]) {
+        if ([primaryAttribute.name isEqualToString:SYNCDefaultLocalPrimaryKey] || [primaryAttribute.name isEqualToString:SYNCDefaultLocalCompatiblePrimaryKey]) {
             remoteKey = SYNCDefaultRemotePrimaryKey;
         } else {
             remoteKey = [primaryAttribute.name hyp_remoteString];
