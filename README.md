@@ -1,9 +1,9 @@
 # NSEntityDescription-SYNCPrimaryKey
 
 [![CI Status](http://img.shields.io/travis/hyperoslo/NSEntityDescription-SYNCPrimaryKey.svg?style=flat)](https://travis-ci.org/hyperoslo/NSEntityDescription-SYNCPrimaryKey)
-[![Version](https://img.shields.io/cocoapods/v/NSEntityDescription-SYNCPrimaryKey.svg?style=flat)](http://cocoadocs.org/docsets/NSEntityDescription-SYNCPrimaryKey)
-[![License](https://img.shields.io/cocoapods/l/NSEntityDescription-SYNCPrimaryKey.svg?style=flat)](http://cocoadocs.org/docsets/NSEntityDescription-SYNCPrimaryKey)
-[![Platform](https://img.shields.io/cocoapods/p/NSEntityDescription-SYNCPrimaryKey.svg?style=flat)](http://cocoadocs.org/docsets/NSEntityDescription-SYNCPrimaryKey)
+[![Version](https://img.shields.io/cocoapods/v/NSEntityDescription-SYNCPrimaryKey.svg?style=flat)](https://cocoapods.org/pods/NSEntityDescription-SYNCPrimaryKey)
+[![License](https://img.shields.io/cocoapods/l/NSEntityDescription-SYNCPrimaryKey.svg?style=flat)](https://cocoapods.org/pods/NSEntityDescription-SYNCPrimaryKey)
+[![Platform](https://img.shields.io/cocoapods/p/NSEntityDescription-SYNCPrimaryKey.svg?style=flat)](https://cocoapods.org/pods/NSEntityDescription-SYNCPrimaryKey)
 
 ## Usage
 
