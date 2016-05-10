@@ -9,10 +9,20 @@ static NSString * _Nonnull const SYNCCustomRemoteKey = @"hyper.remoteKey";
 
 @interface NSEntityDescription (SYNCPrimaryKey)
 
+/**
+ Returns the Core Data attribute used as the primary key. By default it will look for the attribute named `id`.
+ You can mark any attribute as primary key by adding `hyper.isPrimaryKey` and the value `YES` to the Core Data model userInfo.
+ */
 - (nonnull NSAttributeDescription *)sync_primaryKeyAttribute;
 
+/**
+ Returns the local primary key for the entity.
+ */
 - (nonnull NSString *)sync_localKey;
 
+/**
+ Returns the remote primary key for the entity.
+ */
 - (nonnull NSString *)sync_remoteKey;
 
 @end
