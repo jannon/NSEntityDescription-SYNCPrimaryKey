@@ -27,15 +27,23 @@
     XCTAssertEqualObjects(attribute.attributeValueClassName, @"NSNumber");
     XCTAssertEqual(attribute.attributeType, NSInteger32AttributeType);
 
+    entity = [self entityForName:@"SimpleID"];
+    attribute = [entity sync_primaryKeyAttribute];
+    XCTAssertEqualObjects(attribute.attributeValueClassName, @"NSString");
+    XCTAssertEqual(attribute.attributeType, NSStringAttributeType);
+    XCTAssertEqualObjects(attribute.name, @"id");
+
     entity = [self entityForName:@"Note"];
     attribute = [entity sync_primaryKeyAttribute];
     XCTAssertEqualObjects(attribute.attributeValueClassName, @"NSNumber");
     XCTAssertEqual(attribute.attributeType, NSInteger16AttributeType);
+    XCTAssertEqualObjects(attribute.name, @"uniqueID");
 
     entity = [self entityForName:@"Tag"];
     attribute = [entity sync_primaryKeyAttribute];
     XCTAssertEqualObjects(attribute.attributeValueClassName, @"NSString");
     XCTAssertEqual(attribute.attributeType, NSStringAttributeType);
+    XCTAssertEqualObjects(attribute.name, @"randomId");
 
     entity = [self entityForName:@"NoID"];
     attribute = [entity sync_primaryKeyAttribute];
@@ -44,8 +52,10 @@
 
 - (void)testLocalKey {
     NSEntityDescription *entity = [self entityForName:@"User"];
-
     XCTAssertEqualObjects([entity sync_localKey], @"remoteID");
+
+    entity = [self entityForName:@"SimpleID"];
+    XCTAssertEqualObjects([entity sync_localKey], @"id");
 
     entity = [self entityForName:@"Note"];
     XCTAssertEqualObjects([entity sync_localKey], @"uniqueID");
@@ -59,6 +69,9 @@
 
 - (void)testRemoteKey {
     NSEntityDescription *entity = [self entityForName:@"User"];
+    XCTAssertEqualObjects([entity sync_remoteKey], @"id");
+
+    entity = [self entityForName:@"SimpleID"];
     XCTAssertEqualObjects([entity sync_remoteKey], @"id");
 
     entity = [self entityForName:@"Note"];
