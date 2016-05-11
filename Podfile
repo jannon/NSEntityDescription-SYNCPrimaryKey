@@ -1,4 +1,6 @@
 use_frameworks!
 
-pod 'NSEntityDescription-SYNCPrimaryKey', path: "."
-pod 'DATAStack'
+target 'Tests' do
+  pod 'NSEntityDescription-SYNCPrimaryKey', path: "."
+  pod 'DATAStack'
+end

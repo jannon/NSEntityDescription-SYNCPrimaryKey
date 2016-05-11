@@ -52,36 +52,36 @@
 
 - (void)testLocalKey {
     NSEntityDescription *entity = [self entityForName:@"User"];
-    XCTAssertEqualObjects([entity sync_localKey], @"remoteID");
+    XCTAssertEqualObjects([entity sync_localPrimaryKey], @"remoteID");
 
     entity = [self entityForName:@"SimpleID"];
-    XCTAssertEqualObjects([entity sync_localKey], @"id");
+    XCTAssertEqualObjects([entity sync_localPrimaryKey], @"id");
 
     entity = [self entityForName:@"Note"];
-    XCTAssertEqualObjects([entity sync_localKey], @"uniqueID");
+    XCTAssertEqualObjects([entity sync_localPrimaryKey], @"uniqueID");
 
     entity = [self entityForName:@"Tag"];
-    XCTAssertEqualObjects([entity sync_localKey], @"randomId");
+    XCTAssertEqualObjects([entity sync_localPrimaryKey], @"randomId");
 
     entity = [self entityForName:@"NoID"];
-    XCTAssertNil([entity sync_localKey]);
+    XCTAssertNil([entity sync_localPrimaryKey]);
 }
 
 - (void)testRemoteKey {
     NSEntityDescription *entity = [self entityForName:@"User"];
-    XCTAssertEqualObjects([entity sync_remoteKey], @"id");
+    XCTAssertEqualObjects([entity sync_remotePrimaryKey], @"id");
 
     entity = [self entityForName:@"SimpleID"];
-    XCTAssertEqualObjects([entity sync_remoteKey], @"id");
+    XCTAssertEqualObjects([entity sync_remotePrimaryKey], @"id");
 
     entity = [self entityForName:@"Note"];
-    XCTAssertEqualObjects([entity sync_remoteKey], @"unique_id");
+    XCTAssertEqualObjects([entity sync_remotePrimaryKey], @"unique_id");
 
     entity = [self entityForName:@"Tag"];
-    XCTAssertEqualObjects([entity sync_remoteKey], @"id");
+    XCTAssertEqualObjects([entity sync_remotePrimaryKey], @"id");
 
     entity = [self entityForName:@"NoID"];
-    XCTAssertNil([entity sync_remoteKey]);
+    XCTAssertNil([entity sync_remotePrimaryKey]);
 }
 
 @end

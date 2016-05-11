@@ -20,9 +20,9 @@ You can mark any attribute as primary key by adding `hyper.isPrimaryKey` and the
 ```objc
 - (NSAttributeDescription *)sync_primaryKeyAttribute;
 
-- (NSString *)sync_localKey;
+- (NSString *)sync_localPrimaryKey;
 
-- (NSString *)sync_remoteKey;
+- (NSString *)sync_remotePrimaryKey;
 ```
 
 ## Installation
