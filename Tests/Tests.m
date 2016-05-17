@@ -48,6 +48,12 @@
     entity = [self entityForName:@"NoID"];
     attribute = [entity sync_primaryKeyAttribute];
     XCTAssertNil(attribute);
+
+    entity = [self entityForName:@"AlternativeID"];
+    attribute = [entity sync_primaryKeyAttribute];
+    XCTAssertEqualObjects(attribute.attributeValueClassName, @"NSString");
+    XCTAssertEqual(attribute.attributeType, NSStringAttributeType);
+    XCTAssertEqualObjects(attribute.name, @"alternativeID");
 }
 
 - (void)testLocalKey {
@@ -65,6 +71,9 @@
 
     entity = [self entityForName:@"NoID"];
     XCTAssertNil([entity sync_localPrimaryKey]);
+
+    entity = [self entityForName:@"AlternativeID"];
+    XCTAssertEqualObjects([entity sync_localPrimaryKey], @"alternativeID");
 }
 
 - (void)testRemoteKey {
@@ -82,6 +91,9 @@
 
     entity = [self entityForName:@"NoID"];
     XCTAssertNil([entity sync_remotePrimaryKey]);
+
+    entity = [self entityForName:@"AlternativeID"];
+    XCTAssertEqualObjects([entity sync_remotePrimaryKey], @"alternative_id");
 }
 
 @end
