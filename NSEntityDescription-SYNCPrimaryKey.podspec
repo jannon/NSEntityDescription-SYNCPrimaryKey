@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name             = "NSEntityDescription-SYNCPrimaryKey"
   s.summary          = "Support for primary keys in Core Data"
-  s.version          = "1.1.1"
+  s.version          = "1.2.0"
   s.homepage         = "https://github.com/hyperoslo/NSEntityDescription-SYNCPrimaryKey"
   s.license          = 'MIT'
   s.author           = { "Hyper Interaktiv AS" => "ios@hyper.no" }
