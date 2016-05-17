@@ -12,7 +12,7 @@
                                                                BOOL *stop) {
         NSString *isPrimaryKey = attributeDescription.userInfo[SYNCCustomLocalPrimaryKey];
         BOOL hasCustomPrimaryKey = (isPrimaryKey &&
-                                    [isPrimaryKey isEqualToString:SYNCCustomLocalPrimaryKeyValue]);
+                                    ([isPrimaryKey isEqualToString:SYNCCustomLocalPrimaryKeyValue] || [isPrimaryKey isEqualToString:SYNCCustomLocalPrimaryKeyAlternativeValue]) );
         if (hasCustomPrimaryKey) {
             primaryKeyAttribute = attributeDescription;
             *stop = YES;

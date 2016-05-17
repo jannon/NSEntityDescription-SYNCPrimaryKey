@@ -93,7 +93,7 @@
     XCTAssertNil([entity sync_remotePrimaryKey]);
 
     entity = [self entityForName:@"AlternativeID"];
-    XCTAssertEqualObjects([entity sync_remotePrimaryKey], @"id");
+    XCTAssertEqualObjects([entity sync_remotePrimaryKey], @"alternative_id");
 }
 
 @end

@@ -2,11 +2,13 @@
 
 static NSString * _Nonnull const SYNCDefaultLocalPrimaryKey = @"id";
 static NSString * _Nonnull const SYNCDefaultLocalCompatiblePrimaryKey = @"remoteID";
+
 static NSString * _Nonnull const SYNCDefaultRemotePrimaryKey = @"id";
 
 static NSString * _Nonnull const SYNCCustomLocalPrimaryKey = @"hyper.isPrimaryKey";
 static NSString * _Nonnull const SYNCCustomLocalPrimaryKeyValue = @"YES";
 static NSString * _Nonnull const SYNCCustomLocalPrimaryKeyAlternativeValue = @"true";
+
 static NSString * _Nonnull const SYNCCustomRemoteKey = @"hyper.remoteKey";
 
 @interface NSEntityDescription (SYNCPrimaryKey)
