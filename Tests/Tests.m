@@ -11,13 +11,17 @@
 @implementation Tests
 
 - (NSEntityDescription *)entityForName:(NSString *)name {
-    DATAStack *dataStack = [[DATAStack alloc] initWithModelName:@"Pod"
+    return [self entityForName:name modelName:@"Pod"];
+}
+
+- (NSEntityDescription *)entityForName:(NSString *)name modelName:(NSString *)modelName {
+    DATAStack *dataStack = [[DATAStack alloc] initWithModelName:modelName
                                                          bundle:[NSBundle bundleForClass:[self class]]
                                                       storeType:DATAStackStoreTypeInMemory];
 
     return  [NSEntityDescription entityForName:name
                         inManagedObjectContext:dataStack.mainContext];
-
+    
 }
 
 - (void)testPrimaryKeyAttribute {
@@ -94,6 +98,14 @@
 
     entity = [self entityForName:@"AlternativeID"];
     XCTAssertEqualObjects([entity sync_remotePrimaryKey], @"alternative_id");
+}
+
+- (void)testCaching {
+    NSEntityDescription *entityA = [self entityForName:@"User" modelName:@"Pod"];
+    XCTAssertEqualObjects([entityA sync_remotePrimaryKey], @"id");
+
+    NSEntityDescription *entityB = [self entityForName:@"User" modelName:@"Pod2"];
+    XCTAssertEqualObjects([entityB sync_remotePrimaryKey], @"identification");
 }
 
 @end

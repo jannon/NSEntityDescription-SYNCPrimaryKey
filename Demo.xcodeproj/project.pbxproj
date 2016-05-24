@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		141238331CF4CAD70034B481 /* Pod2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 141238311CF4CAD70034B481 /* Pod2.xcdatamodeld */; };
 		1476E04D1BD7D3B80017EDB0 /* Pod.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1476E04A1BD7D3B80017EDB0 /* Pod.xcdatamodeld */; };
 		1476E04E1BD7D3B80017EDB0 /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1476E04C1BD7D3B80017EDB0 /* Tests.m */; };
 		1476E0511BD7D3C20017EDB0 /* NSEntityDescription+SYNCPrimaryKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 1476E0501BD7D3C20017EDB0 /* NSEntityDescription+SYNCPrimaryKey.m */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		141238321CF4CAD70034B481 /* Demo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Demo.xcdatamodel; sourceTree = "<group>"; };
 		146D72AC1AB782920058798C /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		146D72B11AB782920058798C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1476E04B1BD7D3B80017EDB0 /* Demo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Demo.xcdatamodel; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				1476E04A1BD7D3B80017EDB0 /* Pod.xcdatamodeld */,
+				141238311CF4CAD70034B481 /* Pod2.xcdatamodeld */,
 				1476E04C1BD7D3B80017EDB0 /* Tests.m */,
 				146D72B01AB782920058798C /* Supporting Files */,
 			);
@@ -244,6 +247,7 @@
 			files = (
 				1476E0511BD7D3C20017EDB0 /* NSEntityDescription+SYNCPrimaryKey.m in Sources */,
 				1476E04E1BD7D3B80017EDB0 /* Tests.m in Sources */,
+				141238331CF4CAD70034B481 /* Pod2.xcdatamodeld in Sources */,
 				1476E04D1BD7D3B80017EDB0 /* Pod.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -383,6 +387,16 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
+		141238311CF4CAD70034B481 /* Pod2.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				141238321CF4CAD70034B481 /* Demo.xcdatamodel */,
+			);
+			currentVersion = 141238321CF4CAD70034B481 /* Demo.xcdatamodel */;
+			path = Pod2.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
 		1476E04A1BD7D3B80017EDB0 /* Pod.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
