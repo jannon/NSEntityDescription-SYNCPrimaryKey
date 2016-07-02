@@ -1,0 +1,2 @@
+# TODO: revert to "hyperoslo/NSString-HYPNetworking" once PR is merged or carthage compatibility added to base repo
+github "jannon/NSString-HYPNetworking" "add-carthage-compatibility"
